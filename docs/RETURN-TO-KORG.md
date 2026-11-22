@@ -27,3 +27,11 @@ with a version error. The Korg WAV itself stays unchanged.
 
 Studio can report that the signal was sent; **End on the instrument** confirms
 that the update completed.
+
+## Korg's factory patterns on DataBeat OS 1.1
+
+To keep DataBeat OS 1.1 and play Korg's factory patterns, you do not need to
+return to Korg. VolcaStudio XL 1.2 rebuilds them from your Korg updater as a
+DataBeat OS 1.1 bank, set 1 or set 2, and you restore the memories you want:
+see [back to factory state](https://micheledatabeat.github.io/volcastudio-xl-releases/docs/manual/a08-back-to-factory-state.html)
+in the VolcaStudio XL manual.

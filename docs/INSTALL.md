@@ -2,16 +2,20 @@
 
 For the **first-generation Korg volca sample**. Volca Sample 2 is not supported.
 
-DataBeat OS 1.0 is installed with **VolcaStudio XL**, a free application for
-Windows, macOS and Linux. Studio contains no firmware. You download Korg's
-official updater yourself; Studio builds DataBeat OS 1.0 from it on your
+DataBeat OS 1.1 is installed with **VolcaStudio XL 1.2**, a free application
+for Windows, macOS and Linux. Studio contains no firmware. You download Korg's
+official updater yourself; Studio builds DataBeat OS 1.1 from it on your
 computer, checks the result and sends it to the Volca through **SYNC IN**.
+
+If your Volca runs DataBeat OS 1.0, read
+[patterns from DataBeat OS 1.0](#patterns-from-databeat-os-10) before you
+install.
 
 ## 1 · Download VolcaStudio XL
 
 Open the [VolcaStudio XL download page](https://micheledatabeat.github.io/volcastudio-xl-releases/)
-and choose the **Browser App** (opens in Google Chrome) or the **Desktop App**.
-Both install DataBeat OS the same way.
+and choose the **Browser App** (opens in Google Chrome) or the **Desktop App**,
+version 1.2. Both install DataBeat OS the same way.
 
 ## 2 · Download the official Korg updater
 
@@ -39,17 +43,17 @@ On Linux use `sha256sum FILE`, on macOS `shasum -a 256 FILE`, on Windows
 | Browser App | **Firmware** | **Choose the Korg 1.42 updater…** |
 | Desktop App | **04 / Firmware** | **Add Korg 1.42 updater…** |
 
-Studio builds DataBeat OS 1.0 and checks the result: the updater and the built
+Studio builds DataBeat OS 1.1 and checks the result: the updater and the built
 image must match their pinned SHA-256 values, or nothing is saved. Building
 takes a few seconds, needs no internet connection and plays no audio. The
-firmware list then shows **DataBeat OS 1.0** and **Korg volca sample 1.42**,
+firmware list then shows **DataBeat OS 1.1** and **Korg volca sample 1.42**,
 which returns the instrument to Korg's firmware.
 
 ## 4 · Install
 
 Use reliable power. Stop other computer audio, including notifications.
 
-1. Select **DataBeat OS 1.0**.
+1. Select **DataBeat OS 1.1**.
 2. Choose the audio output connected directly to the Volca's **SYNC IN**.
    Disconnect speakers and headphones from that output. Disable EQ,
    normalization, crossfade and other audio processing.
@@ -72,9 +76,31 @@ headphones. Studio's **Signals sent** means the computer finished playing; only
 - You do not need to install Korg 1.42 first. Studio only uses Korg's updater
   file to build DataBeat OS.
 - Saved samples remain. Installing firmware does not convert stored pattern
-  memories.
+  memories: see [patterns from DataBeat OS 1.0](#patterns-from-databeat-os-10).
 - To open an extension page: press **FUNC**, turn **SAMPLE/SELECT** to choose
   it, then press **FUNC** again. Use **WRITE** to save a pattern to a memory.
+
+## Patterns from DataBeat OS 1.0
+
+DataBeat OS 1.1 plays patterns in its own format. Patterns saved with
+DataBeat OS 1.0 play only after VolcaStudio XL converts them.
+
+1. With DataBeat OS 1.0 still on the Volca, take a pattern backup in Studio, or
+   use a bank you already saved.
+2. Convert it: **Convert to DataBeat OS 1.1** (Desktop App: **Patterns**;
+   Browser App: **Memory**). Studio writes a new bank and keeps the original.
+   For a part on the dotted 1/4 or one-bar Echo spacing, which DataBeat OS 1.1
+   lacks, choose the new spacing yourself; until you do, that memory is not
+   converted.
+3. Install DataBeat OS 1.1 as above.
+4. Restore the memories you want from the new bank.
+
+A backup taken after installing DataBeat OS 1.1 also keeps the 1.0 memories
+byte for byte, so Studio can convert those too.
+
+To keep a Volca on DataBeat OS 1.0, use VolcaStudio XL 1.1.0, which builds
+DataBeat OS 1.0 from the same Korg updater. It remains on the download page
+under **All versions and release notes**.
 
 See the [manual](MANUAL.md) for every page and control, and
 [Return to Korg firmware](RETURN-TO-KORG.md) to go back.
